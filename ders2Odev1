@@ -1,0 +1,47 @@
+#2. dersin 1. odevi (manuel)
+ogrenciListesi = ["Merve Aksoy", "Ebru Özgür", "Zafer Tunç", "Barış Çağrı", "Gizem Güneş", "Onur Boz", "İlayda Öztürk", "Ebru Özgür"]
+print(ogrenciListesi)
+print(" ")
+
+# Aldığı isim soy isim ile listeye öğrenci ekleyen
+ogrenciListesi.append("Hakan Gökyıldız")
+print(ogrenciListesi)
+print(" ")
+
+# Aldığı isim soy isim ile eşleşen değeri listeden kaldıran
+# print(list(set(ogrenciListesi))) ile de yapmak mumkun veya:
+ogrenciListesi = list(dict.fromkeys(ogrenciListesi))
+print(ogrenciListesi)
+# veya direk isim ve soy isimi yazarak da yapabiliriz
+# ogrenciListeti.remove("Ebru Özgür")
+# print(ogrenciListesi)
+print(" ")
+
+# Listeye birden fazla öğrenci eklemeyi mümkün kılan
+ogrenciListesi.extend(["Hikmet Kalaycı", "Ayçe Erdoğan", "Halil Gürel"])
+print(ogrenciListesi)
+print(" ")
+
+# Listedeki tüm öğrencileri tek tek ekrana yazdıran
+for ogrenci in ogrenciListesi:
+    print(ogrenci)
+print(" ")
+
+# Öğrencinin listedeki index numarası öğrenci numarası olarak kabul edildiğini düşünerek öğrencinin numarasını öğrenmeyi mümkün kılan
+# for i in range(len(ogrenciListesi)):
+#     print(i)
+#     print(ogrenciListesi[i])
+# print(" ")
+# veya bunu while ile yazarsak:
+
+i = 0
+while i < len(ogrenciListesi):
+    print(i)
+    print(ogrenciListesi[i])
+    i += 1
+print(" ")
+
+# Listeden birden fazla öğrenci silmeyi mümkün kılan fonksiyon - 3 ile 6 arasındakı değerleri siliyor
+del ogrenciListesi[3:6]
+print(ogrenciListesi)
+

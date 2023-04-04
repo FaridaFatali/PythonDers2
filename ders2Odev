@@ -1,0 +1,65 @@
+# #2. dersin 1. odevi
+ogrenciListesi = []
+
+# Aldığı isim soy isim ile listeye öğrenci ekleyen
+def ogrenciEkleme():
+    ogrenci = input("Eklenecek öğrencinin ad ve soyadını giriniz : ")
+    ogrenciListesi.append(ogrenci)
+    print("Öğrenci eklendi.")
+    print(ogrenciListesi)
+ogrenciEkleme()
+print(" ")
+
+# Aldığı isim soy isim ile eşleşen değeri listeden kaldıran
+def ogrenciSilme():
+    ogrenci = input("Silinecek öğrencinin ad ve soyadını giriniz : ")
+    ogrenciListesi.remove(ogrenci)
+    print("Öğrenci silindi")
+    print(ogrenciListesi)
+ogrenciSilme()
+print(" ")
+
+# Listeye birden fazla öğrenci eklemeyi mümkün kılan
+def ogrencilerEkleme():
+    ogrenciSayisi = int(input("Eklenecek öğrenci sayısı kaç? - "))
+    for i in range(ogrenciSayisi):
+        ogrenci = input("Eklenecek öğrencinin adını ve soyadını giriniz: ")
+        ogrenciListesi.append(ogrenci)
+        i += 1
+        print("Öğrenci eklendi")
+        print(ogrenciListesi)
+ogrencilerEkleme()
+print("Yeni öğrenciler eklendi")
+print(" ")
+
+# Listedeki tüm öğrencileri tek tek ekrana yazdıran
+print("Listedeki tüm öğrenciler:")
+for ogrenci in ogrenciListesi:
+    print(ogrenci)
+print(" ")
+
+# Öğrencinin listedeki index numarası öğrenci numarası olarak kabul edildiğini düşünerek öğrencinin numarasını öğrenmeyi mümkün kılan
+def ogrenciBulma():
+    ogrenci = input("Hangi öğrencinin numarasını öğrenmek istersiniz? - ")
+    i = 0
+    while i < len(ogrenciListesi):
+        if ogrenciListesi[i] == ogrenci:
+            print("Öğrenci numarası: ")
+            print(i)
+            break
+        i += 1
+ogrenciBulma()
+print(" ")
+
+# Listeden birden fazla öğrenci silmeyi mümkün kılan (döngü kullanınız)
+def ogrencilerSilme():
+    ogrenciler = int(input("Kaç öğrenci silinecek? - "))
+    i = 0
+    for i in range(ogrenciler):
+        ogrenci = input("Hangi öğrenciyi silmek istersinzi? - ")
+        ogrenciListesi.remove(ogrenci)
+        i += 1
+        print("Öğrenci silindi")
+        print(ogrenciListesi)
+ogrencilerSilme()
+print("Öğrenciler silindi")
